@@ -11,101 +11,146 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
+        /* General Styling */
         body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f4f4f4, #dfe9f3);
+            color: #333;
+        }
 
-h2 {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    color: #273272;
-    font-weight: 800;
-}
+        /* Headings */
+        h2 {
+            text-align: center;
+            color: #273272;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-h3 {
-    text-align: center;
-    color: #333;
-}
+        h3 {
+            color: #007bff;
+            font-size: 20px;
+            margin-top: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
 
-form {
-    width: 50%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        /* Form Styling */
+        form {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 25px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        /* Input Fields */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
 
-button {
-    background: #273272;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 15px;
-}
+        input:focus, select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        }
 
-button:hover {
-    background: #e70a0a;
-}
+        /* File Upload Styling */
+        input[type="file"] {
+            padding: 6px;
+            background: #fff;
+        }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-}
+        /* Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: #273272;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 25px;
+            transition: 0.3s ease-in-out;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        button:hover {
+            background: #e70a0a;
+            box-shadow: 0 4px 10px rgba(231, 10, 10, 0.3);
+        }
 
-.checkbox-label {
-        font-size: 16px;
-        font-weight: bold;
-        color: #333;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
+        /* Checkbox Styling */
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
 
-    /* Style the checkboxes */
-    .styled-checkbox {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #007BFF;
-        border-radius: 4px;
-        margin-right: 10px;
-        cursor: pointer;
-        position: relative;
-    }
+        .styled-checkbox {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
 
-    /* Checkbox checked state */
-    .styled-checkbox:checked {
-        background-color: #007BFF;
-        border-color: #007BFF;
-    }
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            form {
+                max-width: 70%;
+            }
+        }
 
-    /* Checkbox checked - add tick mark */
-    .styled-checkbox:checked::after {
-        content: '✔';
-        color: white;
-        font-size: 14px;
-        font-weight: bold;
-        position: absolute;
-        left: 4px;
-        top: 1px;
-    }
+        @media (max-width: 768px) {
+            form {
+                max-width: 80%;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            input, select, button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            form {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            input, select, button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
 
     </style>
 </head>
